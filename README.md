@@ -53,7 +53,8 @@ Fill the fields with the relevant information of the Azure Storage and VMSS deta
 
 ##### Build immutable machine image
 ![Build immutable image task](/images/Stage1_immutable.png)
-![Build immutable image task](/images/Stage1_immutable2.png)
+
+![Build immutable image task](/images/stage1_immutable2.png)
 Select the Task version as 1.* and check the checkbox for Managed VM disk image. I have put in the image name as the buildid. Select the base image as Ubuntu 18.04 and 'Image URL or Name'.
 
 
