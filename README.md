@@ -27,7 +27,7 @@ The relevant files are explained as below:
 **wsgi.py:** uWSGI file <br />
 **app.ini:** uWSGI configuration file <br />
 **my_app.service:** uWSGI startup file <br />
-**my_app:** NGINX site configuration file. In this file, replace my IP address with the IP address/domain name of your SLB. <br />
+**my_app:** NGINX site configuration file. **In this file, replace my IP address with the IP address/domain name of your SLB.** <br />
 **setupscript.sh:** Shell script used by the CD pipeline of Azure DevOps to prepare the Managed Image which will be later on used by the VMSS.
 
 ### Azure DevOps setup:
@@ -65,7 +65,7 @@ Select the task version as 1.* and select script location as 'Inline Script'. In
 
 
 ### Flow
-The code push to the Azure Repo will trigger the CI pipeline. The CI pipeline will publish the code and setup files to the deop location. The CD pipeline will be triggered on publishing of these files. The CD pipeline will create an image will all the desired configuration as mentioned in setupscript.sh and then will update the VMSS with this newly built image.
+The code push to the Azure Repo will trigger the CI pipeline. The CI pipeline will publish the code and setup files to the deop location. The CD pipeline will be triggered on publishing of these files. The CD pipeline will create an image with all the desired configuration as mentioned in setupscript.sh and then will update the VMSS with this newly built image.
 
 
 ### Result
