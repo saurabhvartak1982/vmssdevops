@@ -1,0 +1,1 @@
+az vmss update --resource-group <resource group name> --name <vmssname> --set virtualMachineProfile.storageProfile.imageReference.id="/subscriptions/<subscriptionid>/resourceGroups/<resource group name>/providers/Microsoft.Compute/images/$(imageUrlVariable)"

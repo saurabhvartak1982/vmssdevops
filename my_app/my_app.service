@@ -1,0 +1,13 @@
+[Unit]
+Description="uWSGI server instance for the demo app my_app for using DevOps on VMSS"
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/html/my_app/
+Environment=FLASK_ENV=test
+ExecStart=/usr/local/bin/uwsgi --ini /var/www/html/my_app/app.ini
+
+[Install]
+WantedBy=multi-user.target
