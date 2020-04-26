@@ -67,6 +67,11 @@ Select the task version as 1.* and select script location as 'Inline Script'. In
 The code push to the Azure Repo will trigger the CI pipeline. The CI pipeline will publish the code and setup files to the deop location. The CD pipeline will be triggered on publishing of these files. The CD pipeline will create an image will all the desired configuration as mentioned in setupscript.sh and then will update the VMSS with this newly built image.
 
 
+### Result
+On browsing the Public IP of the SLB, you should see the result as below:
+![Web page](/images/webpage.png)
+
+
 
 
 
