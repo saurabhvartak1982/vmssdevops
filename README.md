@@ -34,6 +34,7 @@ The relevant files are explained as below:
 
 #### Azure Repository:
 The repository used will be Azure Repo. It will have the code and setup files.
+![Code and set up files](/images/codefiles.png)
 
 #### CI pipeline:
 ![CI pipleline_1](/images/cipipeline1.png)
