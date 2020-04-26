@@ -23,12 +23,12 @@ The relevant files are explained as below:
 
 ![Code and set up files](/images/codefiles.png)
 
-app.py: Web application logic
-wsgi.py: uWSGI file
-app.ini: uWSGI configuration file
-my_app.service: uWSGI startup file
-my_app: NGINX site configuration file. In this file, replace my IP address with the IP address/domain name of your SLB.
-setupscript.sh: Shell script used by the CD pipeline of Azure DevOps to prepare the Managed Image which will be later on used by the VMSS.
+**app.py:** Web application logic <br />
+**wsgi.py:** uWSGI file <br />
+**app.ini:** uWSGI configuration file <br />
+**my_app.service:** uWSGI startup file <br />
+**my_app:** NGINX site configuration file. In this file, replace my IP address with the IP address/domain name of your SLB. <br />
+**setupscript.sh:** Shell script used by the CD pipeline of Azure DevOps to prepare the Managed Image which will be later on used by the VMSS.
 
 ### Azure DevOps setup:
 
