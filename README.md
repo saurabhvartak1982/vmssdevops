@@ -7,6 +7,7 @@ To set the CI/CD pipeline using Azure DevOps for deploying a Python3 based web a
 ## Working:
 
 ### Azure VMSS setup:
+Virtual Machine Scale Set along with a Standard Load Balancer is needed in this set up. Steps to create the same can be found at: https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/quick-create-portal <br /> <br />
 An Azure Standard Load Balancer (SLB) will provide the external facing endpoint. This SLB will have the VMSS instances in its backend pool. The VMSS instances will have the Python3 (Flask and uWSGI) based web application which will serve the requests to the outside world using NGINX. There is also an Azure Storage account and the Images. The Image resource will be created dynamically.
 
 In my demo application my Resource Group looks like below:
@@ -17,7 +18,9 @@ In my demo application my Resource Group looks like below:
 The entire setup of NGINX and Python3 (including Flask and uWSGI) will be deployed on the Ubuntu 18.04 based VMSS instances. 
 The web application logic will be in Python3 web app written using the Flask framework. uWSGI will be the application server and NGINX will be the reverse proxy. 
 
-Link referred for the Flask and uWSGI set up along with NGINX is -- https://www.gab.lc/articles/flask-nginx-uwsgi/ 
+More information on Flask can be found at -- https://flask.palletsprojects.com/en/1.1.x/ <br />
+More information on uWSGI can be found at -- https://uwsgi-docs.readthedocs.io/en/latest/ <br />
+Link referred for the Flask and uWSGI set up along with NGINX is -- https://www.gab.lc/articles/flask-nginx-uwsgi/ <br />
 
 The relevant files are explained as below:
 
